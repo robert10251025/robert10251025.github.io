@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+        <style>
+            .topbar {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .class-name {
+                margin: 0px 90px auto;
+                font-size: 35px;
+                text-align: center;
+                font-weight: bold;
+                color: #000;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+            }
+            .edit,
+            .reset,
+            .back {
+                margin-left: 8px;
+                border: none;
+                cursor: pointer;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(5, 40px);
+                gap: 15px;
+                padding: 15px;
+                border-radius: 8px;
+                border: 2px solid #000;
+                background-color: #fff;
+                box-shadow: 0px 0px 5px 2px #a4a4a4;
+            }
+
+            .square {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 40px;
+                height: 40px;
+                background-color: #fff;
+                color: #000;
+                border: 2px solid #000;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: color border 0.2s;
+                transition: border 0.2s;
+                box-shadow: 0px 0px 5px 2px #a4a4a4;
+            }
+
+            .square.active {
+                /* background-color: cornflowerblue; */
+                border: 2px solid #f00;
+                color: #f00;
+            }
+
+            .drawNumber {
+                padding: 60px;
+                font-family: arial;
+                font-size: 150px;
+                color: #000;
+            }
+
+            .drawButton {
+                width: 80px;
+                height: 50px;
+                background-color: #fff;
+                color: #000;
+                border-radius: 8px;
+                font-size: 20px;
+                font-family: arial;
+                cursor: pointer;
+                box-shadow: 0px 0px 5px 2px #a4a4a4;
+            }
+
+            .drawButton:hover {
+                background-color: #000;
+                color: #fff;
+                box-shadow: 0px 0px 5px 2px #303030;
+            }
+
+            img {
+                width: 25px;
+            }
+        </style>
+    </head>
+    <body data-page="classView">
+        <main class="app-shell">
+            <div class="topbar">
+                <a href="index.html"
+                    ><button class="back"><img src="arrow.png" alt="back" /></button
+                ></a>
+                <h1 class="class-name">Test</h1>
+                <button class="edit" type="edit"><img src="ellipsis.png" alt="Edit" /></button>
+                <button class="reset" type="reset"><img src="delete.png" alt="Reset" /></button>
+            </div>
+            <div class="content">
+                <div class="grid" id="grid"></div>
+                <div class="drawNumber">5</div>
+                <div class="number">
+                    <button class="drawButton">Losuj</button>
+                </div>
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>

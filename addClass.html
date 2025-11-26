@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            label {
+                font-size: 25px;
+                font-weight: bold;
+                margin-bottom: 6px;
+            }
+
+            input {
+                font-size: 25px;
+                border-radius: 8px;
+                border: none;
+                box-shadow: 0px 0px 5px 2px #a4a4a4;
+                padding: 5px;
+            }
+
+            .back {
+                display: flex;
+                width: 25px;
+                cursor: pointer;
+                border: none;
+            }
+
+            button.apply {
+                font-size: 25px;
+                padding: 10px 30px;
+                background-color: #fff;
+                color: #000;
+                border-radius: 8px;
+                border: none;
+                box-shadow: 0px 0px 5px 2px #a4a4a4;
+            }
+
+            button.apply:hover {
+                background-color: #000;
+                color: #fff;
+                border: none;
+                box-shadow: 0px 0px 5px 2px #303030;
+            }
+
+            .addClass {
+                flex: 1;
+                border: 1px dashed #c5c9d0;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+                padding: 16px;
+            }
+
+            .addClass .field {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+            }
+
+            .addClass .field input {
+                width: 100%;
+            }
+
+            .addClass .field.field-inline {
+                flex-direction: row;
+                align-items: center;
+                gap: 45px;
+            }
+
+            .addClass .field.field-inline label {
+                margin-bottom: 0;
+            }
+
+            .addClass .field.field-inline input {
+                width: 80px;
+            }
+
+            .addClass .apply {
+                align-self: center;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body data-page="addClass">
+        <main class="app-shell">
+            <a href="index.html"
+                ><button class="back"><img src="arrow.png" alt="Back" /></button
+            ></a>
+            <form class="addClass" action="">
+                <div class="field">
+                    <label class="name">Nazwa klasy: </label>
+                    <input type="text" required="true" />
+                </div>
+                <div class="field field-inline">
+                    <label class="amount">Ilość uczniów: </label
+                    ><input type="number" min="5" max="25" value="15" inputmode="numeric" />
+                </div>
+                <button class="apply">Dodaj</button>
+            </form>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
